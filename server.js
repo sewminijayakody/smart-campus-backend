@@ -124,6 +124,10 @@ app.get("/", (req, res) => {
   res.send("Smart Campus Backend is Running 🚀");
 });
 
+app.get("/test", (req, res) => {
+  res.send("Is this working 🙌");
+});
+
 app.use("/api/auth", authRoutes);
 
 app.get("/api/inquiries", authMiddleware, async (req, res) => {
